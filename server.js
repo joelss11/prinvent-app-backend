@@ -40,7 +40,7 @@ const PORT = process.env.PORT || 5000;
 
 mongoose.set("strictQuery", false);
 mongoose
-  .connect(`mongodb://127.0.0.1/${process.env.MONGO_DATABASE}`)
+  .connect(`mongodb://${process.env.MONGO_HOST}/${process.env.MONGO_DATABASE}`)
   .then(() => {
     app.listen(PORT, () => {
       console.log(`Server Running On PORT ${PORT}`);
