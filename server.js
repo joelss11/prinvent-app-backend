@@ -19,10 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: [
-      "http://127.0.0.1:5173",
-      "https://pinvent-app-frontend-livid.vercel.app",
-    ],
+    origin: ["http://127.0.0.1:5173", "https://pinvent-app-apipk.vercel.app"],
     credentials: true,
   })
 );
