@@ -17,7 +17,15 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(cors({ origin: ["http://127.0.0.1:5173"], credentials: true }));
+app.use(
+  cors({
+    origin: [
+      "http://127.0.0.1:5173",
+      "https://pinvent-app-frontend-livid.vercel.app",
+    ],
+    credentials: true,
+  })
+);
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
